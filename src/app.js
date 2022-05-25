@@ -517,7 +517,7 @@ function onClick() {
     intersects[0].object.material.uniforms.uValueA.value = Math.random() +.1
     intersects[0].object.material.uniforms.uValueB.value = Math.random() + .1
     intersects[0].object.material.uniforms.uValueC.value = Math.random() + .1
-    intersects[0].object.material.uniforms.uValueD.value = Math.floor((Math.random() * 20))
+    intersects[0].object.material.uniforms.uValueD.value = Math.floor((Math.random() * 20)) + 1
   }
 
 
