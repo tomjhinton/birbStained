@@ -36,10 +36,16 @@ document.querySelector('#titular').addEventListener('click', (e) => {
     churchMaterial.map = churchTexture2
     document.body.style.backgroundColor = "red";
     document.querySelector('#devil').style.visibility = 'visible'
+    materialsArr.map(x=> {
+      x.uniforms.uValueAlpha.value = 0.75
+    })
   } else if (churchMaterial.map === churchTexture2){
     churchMaterial.map = churchTexture
     document.body.style.backgroundColor = "white";
     document.querySelector('#devil').style.visibility = 'hidden'
+    materialsArr.map(x=> {
+      x.uniforms.uValueAlpha.value = 1.
+    })
   }
 
   if (notPlaying && currentMidi) {
@@ -55,7 +61,7 @@ document.querySelector('#titular').addEventListener('click', (e) => {
           release: 1
         }
       }).toDestination()
-      console.log(synth)
+      // console.log(synth)
       synth.connect(freeverb)
       synth.connect(vol)
       synths.push(synth)
@@ -151,7 +157,7 @@ churchTexture.flipY = false
 churchTexture.encoding = THREE.sRGBEncoding
 
 
-const churchTexture2 = textureLoader.load('bakedC3.jpg')
+const churchTexture2 = textureLoader.load('bakedC3.png')
 
 churchTexture2.flipY = false
 churchTexture2.encoding = THREE.sRGBEncoding
@@ -193,7 +199,10 @@ const churchMaterial = new THREE.MeshBasicMaterial({ map: churchTexture,
       },
       uValueD: {
         value: 9
-      }
+      },
+      uValueAlpha: {
+      value: 1
+    }
     }
   })
 
@@ -223,7 +232,10 @@ const churchMaterial = new THREE.MeshBasicMaterial({ map: churchTexture,
       },
       uValueD: {
         value: 9
-      }
+      },
+      uValueAlpha: {
+      value: 1
+    }
     }
   })
 
@@ -253,7 +265,10 @@ const churchMaterial = new THREE.MeshBasicMaterial({ map: churchTexture,
       },
       uValueD: {
         value: 9
-      }
+      },
+      uValueAlpha: {
+      value: 1
+    }
     }
   })
 
@@ -283,7 +298,10 @@ const churchMaterial = new THREE.MeshBasicMaterial({ map: churchTexture,
       },
       uValueD: {
         value: 9
-      }
+      },
+      uValueAlpha: {
+      value: 1
+    }
     }
   })
 
@@ -313,7 +331,10 @@ const churchMaterial = new THREE.MeshBasicMaterial({ map: churchTexture,
       },
       uValueD: {
         value: 9
-      }
+      },
+      uValueAlpha: {
+      value: 1
+    }
     }
   })
 
@@ -343,11 +364,14 @@ const churchMaterial = new THREE.MeshBasicMaterial({ map: churchTexture,
       },
       uValueD: {
         value: 9
-      }
+      },
+      uValueAlpha: {
+      value: 1
+    }
     }
   })
 
-
+let materialsArr = [shaderMaterial, shaderMaterial1, shaderMaterial2, shaderMaterial3, shaderMaterial4, shaderMaterial5]
 
 let sceneGroup, church, windowS, windowS1, windowS2, windowS3, windowS4, windowS5, windowsArr
 
@@ -481,20 +505,20 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-// Cursor
-
-const cursor = {}
-
-cursor.x = 0
-cursor.y = 0
-
-window.addEventListener('mousemove', (event) => {
-  cursor.x =event.clientX / sizes.width -.5
-  cursor.y =event.clientY / sizes.height -.5
-
-
-
-})
+// // Cursor
+//
+// const cursor = {}
+//
+// cursor.x = 0
+// cursor.y = 0
+//
+// window.addEventListener('mousemove', (event) => {
+//   cursor.x =event.clientX / sizes.width -.5
+//   cursor.y =event.clientY / sizes.height -.5
+//
+//
+//
+// })
 
 const raycaster = new THREE.Raycaster()
 const mouse = new THREE.Vector2()

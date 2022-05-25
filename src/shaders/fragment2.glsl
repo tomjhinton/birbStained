@@ -10,6 +10,7 @@ uniform float uValueA;
 uniform float uValueB;
 uniform float uValueC;
 uniform float uValueD;
+uniform float uValueAlpha;
 varying vec2 vUv;
 varying float vTime;
 
@@ -268,6 +269,6 @@ void main(){
 
 
 
- gl_FragColor =  vec4(color, 1.);
+ gl_FragColor =  vec4(color, uValueAlpha);
 
 }
