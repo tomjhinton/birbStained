@@ -180,7 +180,7 @@ const churchMaterial = new THREE.MeshBasicMaterial({ map: churchTexture,
     depthWrite: true,
     clipShadows: true,
     wireframe: false,
-    side: THREE.DoubleSide,
+    side: THREE.FrontSide,
     uniforms: {
       uFrequency: {
         value: new THREE.Vector2(10, 5)
@@ -213,7 +213,7 @@ const churchMaterial = new THREE.MeshBasicMaterial({ map: churchTexture,
     depthWrite: true,
     clipShadows: true,
     wireframe: false,
-    side: THREE.DoubleSide,
+    side: THREE.FrontSide,
     uniforms: {
       uFrequency: {
         value: new THREE.Vector2(10, 5)
@@ -246,7 +246,7 @@ const churchMaterial = new THREE.MeshBasicMaterial({ map: churchTexture,
     depthWrite: true,
     clipShadows: true,
     wireframe: false,
-    side: THREE.DoubleSide,
+    side: THREE.FrontSide,
     uniforms: {
       uFrequency: {
         value: new THREE.Vector2(10, 5)
@@ -279,7 +279,7 @@ const churchMaterial = new THREE.MeshBasicMaterial({ map: churchTexture,
     depthWrite: true,
     clipShadows: true,
     wireframe: false,
-    side: THREE.DoubleSide,
+    side: THREE.FrontSide,
     uniforms: {
       uFrequency: {
         value: new THREE.Vector2(10, 5)
@@ -312,7 +312,7 @@ const churchMaterial = new THREE.MeshBasicMaterial({ map: churchTexture,
     depthWrite: true,
     clipShadows: true,
     wireframe: false,
-    side: THREE.DoubleSide,
+    side: THREE.FrontSide,
     uniforms: {
       uFrequency: {
         value: new THREE.Vector2(10, 5)
@@ -345,7 +345,7 @@ const churchMaterial = new THREE.MeshBasicMaterial({ map: churchTexture,
     depthWrite: true,
     clipShadows: true,
     wireframe: false,
-    side: THREE.DoubleSide,
+    side: THREE.FrontSide,
     uniforms: {
       uFrequency: {
         value: new THREE.Vector2(10, 5)
