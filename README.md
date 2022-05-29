@@ -1,4 +1,4 @@
-# birbSnail
+# birbStained
 
 For @sableRaph's weekly Creative Coding Challenge. The Challenge topic was 'Stained Glass'.
 
